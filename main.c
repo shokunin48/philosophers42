@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:56:11 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/23 16:28:42 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:40:05 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,12 @@ int	ft_isdigit(int ch)
 	return (0);
 }
 
-int	check_input(int argc, char **argv)
+int	check_input(char **argv)
 {
 	int	i;
 	int	j;
 
 	i = 1;
-	if (argc != 6)
-	{
-		printf("Usage: ./philos [# Philosophers] [time_to_die] [time_to_eat] ");
-		printf("[time_to_sleep] ([times_each_philosopher_must_eat])\n");
-		return (1);
-	}
 	while (argv[i])
 	{
 		j = 0;
@@ -39,13 +33,19 @@ int	check_input(int argc, char **argv)
 			if (!ft_isdigit(argv[i][j]))
 			{
 				printf("%s\n", "Incorrect input.");
-				return (1);
+				return (0);
 			}
 			j++;
 		}
 		i++;
 	}
-	return (0);
+	if (ft_atoi(argv[1]) <= 0 || ft_atoi(argv[2]) <= 0 || \
+		ft_atoi(argv[3]) <= 0 || ft_atoi(argv[4]) <= 0 || \
+		(argv[5] && ft_atoi(argv[5]) <= 0))
+	{
+		return (0);
+	}
+	return (1);
 }
 
 int	main(int argc, char **argv)
@@ -53,7 +53,11 @@ int	main(int argc, char **argv)
 	t_philo	*p;
 	t_data	*data;
 
-	check_input(argc, argv);
+	if ((argc != 5 && argc != 6) || !check_input(argv) || ft_atoi(argv[1]) < 1)
+	{
+		print_error();
+		exit(0);
+	}
 	p = malloc(sizeof(t_philo) * ft_atoi(argv[1]));
 	if (p == NULL)
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:56:30 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/23 15:57:21 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:38:12 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ int			smbd_died(t_philo *p);
 long int	time_now(void);
 int			ft_usleep(long int time);
 void		ft_print(t_philo *p, int i);
+void		print_error(void);
 
 #endif
