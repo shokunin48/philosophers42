@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:56:11 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/23 14:55:13 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 16:28:42 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	main(int argc, char **argv)
 		return (0);
 	init_philo_data(p, data);
 	action(p);
-	//join_threads(p);
-	//free_all(p);
+	join_threads(p);
+	free_all(p);
 	return (0);
 }

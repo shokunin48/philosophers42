@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:56:30 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/22 18:12:31 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 15:57:21 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void		action(t_philo *p);
 void		ft_create_threads(t_philo *p);
 void		check_threads(t_philo *p);
 void		*routine(void *ph);
-int			someone_died(t_philo *p);
+int			smbd_died(t_philo *p);
 
 long int	time_now(void);
 int			ft_usleep(long int time);

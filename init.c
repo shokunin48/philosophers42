@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 17:52:06 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/23 14:52:17 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 18:44:10 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	init_philo_data(t_philo *p, t_data *data)
 		p[i].meal = 0;
 		p[i].fork_left = &data->fork[i];
 		if (p[i].id == data->num_of_philos)
-			p[i].fork_left = &data->fork[0];
+			p[i].fork_right = &data->fork[0];
 		else
 			p[i].fork_right = &data->fork[i + 1];
 		p[i].data = data;

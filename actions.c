@@ -6,11 +6,20 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 19:59:06 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/22 20:44:48 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 16:24:59 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+
+int	smbd_died(t_philo *p)
+{
+	ft_print(p, 5);
+	p->data->done = 1;
+	pthread_mutex_unlock(p->fork_left);
+	pthread_mutex_unlock(p->fork_right);
+	return (1);
+}
 
 void	ft_eat(t_philo *p)
 {

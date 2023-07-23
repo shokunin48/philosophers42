@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 17:08:10 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/22 19:27:52 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 15:42:15 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	check_death(t_philo *p)
 	if (now >= p->data->time_to_die)
 	{
 		pthread_mutex_unlock(p->data->death);
-		return (someone_died(p));
+		return (smbd_died(p));
 	}
 	pthread_mutex_unlock(p->data->death);
 	return (0);

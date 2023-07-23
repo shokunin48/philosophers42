@@ -6,20 +6,11 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:25:46 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/22 18:11:34 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/23 15:54:55 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-int	someone_died(t_philo *p)
-{
-	ft_print(p, 5);
-	p->data->done = 1;
-	pthread_mutex_unlock(p->fork_left);
-	pthread_mutex_unlock(p->fork_right);
-	return (1);
-}
 
 long int	time_now(void)
 {
