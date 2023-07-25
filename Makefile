@@ -6,7 +6,7 @@
 #    By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/11 18:56:34 by ibellash          #+#    #+#              #
-#    Updated: 2023/07/22 19:14:18 by ibellash         ###   ########.fr        #
+#    Updated: 2023/07/25 16:09:17 by ibellash         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,15 +25,17 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(OBJS) 
-	$(CC) $(CFLAGS)  $(OBJS) -o $(NAME)
+	@$(CC) $(CFLAGS)  $(OBJS) -o $(NAME)
+	@echo "Philosophers successfully compiled!"
  
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJS)
+	@rm -rf $(OBJS)
+	@echo "Philosophers successfully cleaned!"
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 	
 re: fclean all
 

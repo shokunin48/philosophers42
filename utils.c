@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:25:46 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/23 20:38:25 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/25 14:08:59 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	print_error(void)
 {
+	printf("%s\n", "Incorrect input.");
 	printf("Usage: ./philos [# Philosophers - should be > 1]");
-	printf("[time_to_die] [time_to_eat]");
-	printf("[time_to_sleep] ([times_each_philosopher_must_eat])\n");
+	printf("[time_to_die > 0] [time_to_eat > 0] [time_to_sleep > 0]");
+	printf("([times_each_philosopher_must_eat (if need)])\n");
 }
 
 long int	time_now(void)

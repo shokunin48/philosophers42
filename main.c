@@ -6,7 +6,7 @@
 /*   By: ibellash <ibellash@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:56:11 by ibellash          #+#    #+#             */
-/*   Updated: 2023/07/23 20:40:05 by ibellash         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:53:55 by ibellash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,14 @@ int	check_input(char **argv)
 		while (argv[i][j])
 		{
 			if (!ft_isdigit(argv[i][j]))
-			{
-				printf("%s\n", "Incorrect input.");
 				return (0);
-			}
 			j++;
 		}
 		i++;
 	}
-	if (ft_atoi(argv[1]) <= 0 || ft_atoi(argv[2]) <= 0 || \
-		ft_atoi(argv[3]) <= 0 || ft_atoi(argv[4]) <= 0 || \
-		(argv[5] && ft_atoi(argv[5]) <= 0))
+	if (ft_atoi(argv[1]) <= 0 || ft_atoi(argv[2]) <= 0
+		|| ft_atoi(argv[3]) <= 0 || ft_atoi(argv[4]) <= 0
+		|| (argv[5] && ft_atoi(argv[5]) <= 0))
 	{
 		return (0);
 	}
